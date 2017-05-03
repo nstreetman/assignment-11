@@ -7,7 +7,12 @@
  *
 **/
 var hasDoubleLetters = function(string) {
-  
+  var doubleLetter = false;
+  for(var i = 0; i < string.length; i++){
+    if(string[i] === string[i-1])
+    doubleLetter = true;
+  }
+  return doubleLetter;
 }
 
 console.assert( hasDoubleLetters('stutter') === true )
